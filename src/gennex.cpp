@@ -9,7 +9,7 @@ gennex::pevak::uint256_t gennex::pevak::string_to_uint256(std::string_view str)
     {
         tmp += c;
         i++;
-        if (16 == i)
+        if (res.max_size() == i)
         {
             res[j] = string_to_integer<std::uint16_t>(tmp, 2).first;
             j++;
